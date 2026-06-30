@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSC_SEMP {
+  expose ZC_SEMP;
+}

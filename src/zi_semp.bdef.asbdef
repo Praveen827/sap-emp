@@ -1,0 +1,27 @@
+managed implementation in class zbp_i_semp unique;
+strict ( 2 );
+
+define behavior for ZI_SEMP
+persistent table ztb_semp
+lock master
+authorization master ( global )
+{
+  create;
+  update;
+  delete;
+
+  mapping for ztb_semp
+  {
+    Empid      = empid;
+    EmpName    = emp_name;
+    Department = department;
+    Email      = email;
+    Status     = status;
+
+    LocalCreatedBy      = local_created_by;
+    LocalCreatedAt      = local_created_at;
+    LocalLastChangedBy  = local_last_changed_by;
+    LocalLastChangedAt  = local_last_changed_at;
+    LastChangedAt       = last_changed_at;
+  }
+}
